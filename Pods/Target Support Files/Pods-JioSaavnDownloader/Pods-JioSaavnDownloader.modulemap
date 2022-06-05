@@ -1,0 +1,6 @@
+framework module Pods_JioSaavnDownloader {
+  umbrella header "Pods-JioSaavnDownloader-umbrella.h"
+
+  export *
+  module * { export * }
+}
