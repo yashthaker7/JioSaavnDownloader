@@ -1,22 +1,26 @@
 PODS:
   - Alamofire (5.2.1)
+  - SoundWave (0.1.4)
   - SwiftMessages (7.0.1):
     - SwiftMessages/App (= 7.0.1)
   - SwiftMessages/App (7.0.1)
 
 DEPENDENCIES:
   - Alamofire
+  - SoundWave
   - SwiftMessages
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - SoundWave
     - SwiftMessages
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  SoundWave: d98ffaa863570b29d991da32a09b7ce1b4aaf2d4
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
 
-PODFILE CHECKSUM: 670c02757a12ec819d0e7b053bfa280a6adfc449
+PODFILE CHECKSUM: 47932eb30ba4234221294169047d79d2697e0ada
 
 COCOAPODS: 1.11.3

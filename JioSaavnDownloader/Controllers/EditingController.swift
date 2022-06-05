@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 import AVKit
+import SoundWave
 
 class EditingController: UIViewController {
     
@@ -29,19 +30,44 @@ class EditingController: UIViewController {
         return colorPicker
     }()
     
+    var currentTime = CMTime.zero
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationView.addShadow(ofColor: .white, radius: 2)
+        setupSoundWaveView()
+        playPauseBtn.setTitle("", for: .normal)
+    }
+    
+    private func setupSoundWaveView() {
+        let audioVisualizationView = AudioVisualizationView(frame: CGRect(x: 0, y: 0, width: 5000, height: 200))
+        trimmerContainerView.addSubview(audioVisualizationView)
+        audioVisualizationView.meteringLevelBarWidth = 5
+        audioVisualizationView.meteringLevelBarInterItem = 1
+        audioVisualizationView.meteringLevelBarCornerRadius = 0
+        // audioVisualizationView.meteringLevelBarSingleStick = true
+        audioVisualizationView.gradientStartColor = .white
+        audioVisualizationView.gradientEndColor = .black
+        audioVisualizationView.audioVisualizationMode = .read
+        audioVisualizationView.meteringLevels = [0.1, 0.67, 0.13, 0.78, 0.31]
+        // audioVisualizationView.play(for: 5.0)
         
-//        let videoUrl = Bundle.main.url(forResource: "blank_video", withExtension: "mp4")!
-//        let exportUrl = FileManager.default.createURLInDD("video.mp4")
-//        FileManager.default.removeFileIfExists(exportUrl)
-//        TYAudioVideoManager.shared.mergeAudioTo(videoUrl: videoUrl, audioUrl: downloadedSongUrlInDD!, exportUrl: exportUrl) { progress in
-//            print(progress)
-//        } completion: { destinationUrl, error in
-//            print(destinationUrl)
-//        }
+        guard let downloadedSongUrlInDD = downloadedSongUrlInDD else { return }
+        var outputArray = [Float]()
+        TYAudioContext.load(fromAudioURL: downloadedSongUrlInDD, completionHandler: { audioContext in
+            guard let audioContext = audioContext else {
+                fatalError("Couldn't create the audioContext")
+            }
+            outputArray = render(audioContext: audioContext, targetSamples: 300)
+            outputArray = outputArray.map({ abs($0)/80 })
+            print(outputArray)
+            print(outputArray.count)
+            DispatchQueue.main.async {
+                audioVisualizationView.reset()
+                audioVisualizationView.meteringLevels = outputArray
+            }
+        })
     }
     
     @IBAction func backBtnAction(_ sender: UIButton) {
@@ -49,7 +75,8 @@ class EditingController: UIViewController {
     }
     
     @IBAction func shareBtnAction(_ sender: UIButton) {
-        shareFile(downloadedSongUrlInDD!, sourceView: sender, parentController: self)
+        guard let downloadedSongUrlInDD = downloadedSongUrlInDD else { return }
+        shareFile(downloadedSongUrlInDD, sourceView: sender, parentController: self)
     }
     
     @IBAction func changeBGColorBtnAction(_ sender: UIButton) {
@@ -63,11 +90,14 @@ class EditingController: UIViewController {
             let item = AVPlayerItem(asset: composition)
             player = AVPlayer(playerItem: item)
             player?.addPeriodicTimeObserver(forInterval: CMTime(value: 1, timescale: 30), queue: .main) { (currentTime) in
-                self.duationLabel.text = currentTime.formatedSeconds()
+                self.duationLabel.text = currentTime.stringInmmssSS
             }
-            player?.play()
+            player?.seek(to: currentTime, toleranceBefore: .zero, toleranceAfter: .zero, completionHandler: { success in
+                self.player?.play()
+            })
         } else {
             player?.pause()
+            currentTime = player?.currentTime() ?? .zero
         }
         isPlaying.toggle()
         playPauseBtn.setImage(UIImage(systemName: isPlaying ? "pause.fill" : "play.fill"), for: .normal)

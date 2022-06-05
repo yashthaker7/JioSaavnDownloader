@@ -15,6 +15,7 @@
 		D30B60CC284C4226003FA159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30B60CA284C4226003FA159 /* LaunchScreen.storyboard */; };
 		D30B60D8284C42CD003FA159 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B60D7284C42CD003FA159 /* MainNavigationController.swift */; };
 		D32FEE0D284C448B00E76072 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FEE0C284C448B00E76072 /* HomeController.swift */; };
+		D340C73D284D194E00AB4541 /* TYAudioContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340C73C284D194E00AB4541 /* TYAudioContext.swift */; };
 		D34FA4CF284C558E00E74C4A /* TYIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA4CC284C558E00E74C4A /* TYIdentifiable.swift */; };
 		D34FA4D0284C558E00E74C4A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA4CD284C558E00E74C4A /* NetworkManager.swift */; };
 		D34FA4D1284C558E00E74C4A /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA4CE284C558E00E74C4A /* AlertManager.swift */; };
@@ -47,6 +48,7 @@
 		D30B60CD284C4226003FA159 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D30B60D7284C42CD003FA159 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		D32FEE0C284C448B00E76072 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		D340C73C284D194E00AB4541 /* TYAudioContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TYAudioContext.swift; sourceTree = "<group>"; };
 		D34FA4CC284C558E00E74C4A /* TYIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYIdentifiable.swift; sourceTree = "<group>"; };
 		D34FA4CD284C558E00E74C4A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D34FA4CE284C558E00E74C4A /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				D3E74390284C95A3008B6264 /* TYProgressBar.swift */,
 				D34FA4CC284C558E00E74C4A /* TYIdentifiable.swift */,
+				D340C73C284D194E00AB4541 /* TYAudioContext.swift */,
 				D3E74388284C81BC008B6264 /* CustomViews */,
 			);
 			path = Helpers;
@@ -351,6 +354,7 @@
 				D3E7438F284C9098008B6264 /* Extension+FileManager.swift in Sources */,
 				D32FEE0D284C448B00E76072 /* HomeController.swift in Sources */,
 				D34FA4DF284C6A7D00E74C4A /* Extension+String.swift in Sources */,
+				D340C73D284D194E00AB4541 /* TYAudioContext.swift in Sources */,
 				D34FA4D1284C558E00E74C4A /* AlertManager.swift in Sources */,
 				D34FA4D7284C564200E74C4A /* API.swift in Sources */,
 				D3E74391284C95A3008B6264 /* TYProgressBar.swift in Sources */,

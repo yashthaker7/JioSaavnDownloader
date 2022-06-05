@@ -49,48 +49,6 @@ class TYAudioVideoManager: NSObject {
         return mixComposition
     }
     
-    func mergeAudioTo(videoUrl: URL, audioUrl: URL, exportUrl: URL, progress: @escaping Progress, completion: @escaping Completion) {
-        let videoAsset = AVAsset(url: videoUrl)
-        let audioAsset = AVAsset(url: audioUrl)
-        
-        // Init composition
-        let mixComposition = AVMutableComposition.init()
-        
-        // Get video track
-        guard let videoTrack = videoAsset.tracks(withMediaType: .video).first else {
-            print("[Error]: Video not found.")
-            completion(nil, nil)
-            return
-        }
-        
-        // Get audio track
-        guard let audioTrack = audioAsset.tracks(withMediaType: .audio).first else {
-            print("[Error]: Audio not found.")
-            completion(nil, nil)
-            return
-        }
-        
-        // Init video & audio composition track
-        let videoCompositionTrack = mixComposition.addMutableTrack(withMediaType: .video,
-                                                                   preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
-        
-        let audioCompositionTrack = mixComposition.addMutableTrack(withMediaType: .audio,
-                                                                   preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
-        
-        do {
-            // Add video track to video composition at specific time
-            try videoCompositionTrack?.insertTimeRange(CMTimeRangeMake(start: .zero, duration: audioAsset.duration), of: videoTrack, at: .zero)
-            
-            // Add audio track to audio composition at specific time
-            try audioCompositionTrack?.insertTimeRange(CMTimeRangeMake(start: .zero, duration: audioAsset.duration), of: audioTrack, at: .zero)
-            
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-        startExport(mixComposition, nil, exportUrl, progress: progress, completion: completion)
-    }
-    
     deinit { print("TYAudioVideoManager deinit.") }
 }
 
@@ -173,12 +131,12 @@ extension TYAudioVideoManager {
         }
     }
     
-    fileprivate func startExport(_ mixComposition: AVAsset, _ videoComposition: AVMutableVideoComposition? = nil,  _ exportUrl: URL, preset: String? = nil, timeRange: CMTimeRange? = nil, progress: @escaping Progress, completion: @escaping Completion) {
+    fileprivate func startExport(_ mixComposition: AVAsset, _ videoComposition: AVMutableVideoComposition? = nil,  _ exportUrl: URL, preset: String? = nil, timeRange: CMTimeRange? = nil, outputFileType: AVFileType = .mp4, progress: @escaping Progress, completion: @escaping Completion) {
         
         // Init exporter
         let exporter = AVAssetExportSession.init(asset: mixComposition, presetName: (preset ?? AVAssetExportPresetPassthrough))
         exporter?.outputURL = exportUrl
-        exporter?.outputFileType = AVFileType.mov
+        exporter?.outputFileType = outputFileType
         exporter?.shouldOptimizeForNetworkUse = true
         exporter?.videoComposition = videoComposition
         if let timeRange = timeRange {
@@ -239,34 +197,26 @@ extension UIImage {
 
 extension CMTime {
     
-    func formatedSeconds() -> String {
-        let result = getHoursMinutesSecondsFrom(seconds: seconds)
-        let hoursString = "\(result.hours)"
-        var minutesString = "\(result.minutes)"
-        if minutesString.count == 1 {
-            minutesString = "0\(result.minutes)"
-        }
-        var secondsString = "\(result.seconds)"
-        if secondsString.count == 1 {
-            secondsString = "0\(result.seconds)"
-        }
-        var time = "\(hoursString):"
-        if result.hours >= 1 {
-            time.append("\(minutesString):\(secondsString)")
-        } else {
-            time = "\(minutesString):\(secondsString)"
-        }
-        return time
+    var msS: (Int, Int, Int) {
+        let duration = CMTimeGetSeconds(self)
+        let minutes = Int(floor(duration / 60))
+        let seconds = Int(floor(duration - Double(minutes) * 60))
+        let milliseconds = Int((duration - floor(duration)) * 100)
+        return (minutes, seconds, milliseconds)
     }
     
-    func getHoursMinutesSecondsFrom(seconds: Double) -> (hours: Int, minutes: Int, seconds: Int) {
-        let secs = Int(seconds)
-        let hours = secs / 3600
-        let minutes = (secs % 3600) / 60
-        let seconds = (secs % 3600) % 60
-        
-        // return the millisecond here aswell?
-        
-        return (hours, minutes, seconds)
+    var stringInsSS: String {
+        let (minutes, seconds, milliseconds) = msS
+        return String(format: "%d.%02d", minutes * 60 + seconds, milliseconds)
+    }
+    
+    var stringInmmssSS: String {
+        let (minutes, seconds, milliseconds) = msS
+        return String(format: "%02d:%02d.%02d", minutes, seconds, milliseconds)
+    }
+    
+    var stringInmmmsssSS: String {
+        let (minutes, seconds, milliseconds) = msS
+        return String(format: "%02dm%02ds%02d", minutes, seconds, milliseconds)
     }
 }
