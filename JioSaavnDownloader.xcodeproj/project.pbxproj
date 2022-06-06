@@ -15,7 +15,6 @@
 		D30B60CC284C4226003FA159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30B60CA284C4226003FA159 /* LaunchScreen.storyboard */; };
 		D30B60D8284C42CD003FA159 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B60D7284C42CD003FA159 /* MainNavigationController.swift */; };
 		D32FEE0D284C448B00E76072 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FEE0C284C448B00E76072 /* HomeController.swift */; };
-		D340C73D284D194E00AB4541 /* TYAudioContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340C73C284D194E00AB4541 /* TYAudioContext.swift */; };
 		D34FA4CF284C558E00E74C4A /* TYIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA4CC284C558E00E74C4A /* TYIdentifiable.swift */; };
 		D34FA4D0284C558E00E74C4A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA4CD284C558E00E74C4A /* NetworkManager.swift */; };
 		D34FA4D1284C558E00E74C4A /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA4CE284C558E00E74C4A /* AlertManager.swift */; };
@@ -27,13 +26,10 @@
 		D34FA4E1284C714B00E74C4A /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA4E0284C714B00E74C4A /* Extension+UIView.swift */; };
 		D3681109284CEBE8008AB1C7 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3681108284CEBE8008AB1C7 /* Song.swift */; };
 		D3E74387284C81B9008B6264 /* ProgressContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E74386284C81B9008B6264 /* ProgressContainerView.swift */; };
-		D3E7438D284C9005008B6264 /* EditingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7438C284C9005008B6264 /* EditingController.swift */; };
 		D3E7438F284C9098008B6264 /* Extension+FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7438E284C9098008B6264 /* Extension+FileManager.swift */; };
 		D3E74391284C95A3008B6264 /* TYProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E74390284C95A3008B6264 /* TYProgressBar.swift */; };
 		D3E74393284C9D2D008B6264 /* Extension+UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E74392284C9D2D008B6264 /* Extension+UIStoryboard.swift */; };
 		D3E74395284CC341008B6264 /* TYAudioVideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E74394284CC341008B6264 /* TYAudioVideoManager.swift */; };
-		D3E74397284CC470008B6264 /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = D3E74396284CC470008B6264 /* blank.wav */; };
-		D3E7439E284CD2B2008B6264 /* blank_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D3E7439D284CD2B2008B6264 /* blank_video.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +44,6 @@
 		D30B60CD284C4226003FA159 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D30B60D7284C42CD003FA159 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		D32FEE0C284C448B00E76072 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		D340C73C284D194E00AB4541 /* TYAudioContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TYAudioContext.swift; sourceTree = "<group>"; };
 		D34FA4CC284C558E00E74C4A /* TYIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYIdentifiable.swift; sourceTree = "<group>"; };
 		D34FA4CD284C558E00E74C4A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D34FA4CE284C558E00E74C4A /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -60,13 +55,10 @@
 		D34FA4E0284C714B00E74C4A /* Extension+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		D3681108284CEBE8008AB1C7 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		D3E74386284C81B9008B6264 /* ProgressContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressContainerView.swift; sourceTree = "<group>"; };
-		D3E7438C284C9005008B6264 /* EditingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingController.swift; sourceTree = "<group>"; };
 		D3E7438E284C9098008B6264 /* Extension+FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+FileManager.swift"; sourceTree = "<group>"; };
 		D3E74390284C95A3008B6264 /* TYProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TYProgressBar.swift; sourceTree = "<group>"; };
 		D3E74392284C9D2D008B6264 /* Extension+UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIStoryboard.swift"; sourceTree = "<group>"; };
 		D3E74394284CC341008B6264 /* TYAudioVideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TYAudioVideoManager.swift; sourceTree = "<group>"; };
-		D3E74396284CC470008B6264 /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
-		D3E7439D284CD2B2008B6264 /* blank_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = blank_video.mp4; sourceTree = "<group>"; };
 		E541B4F498427FB4A50EEE11 /* Pods_JioSaavnDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JioSaavnDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +104,7 @@
 		D30B60BE284C4225003FA159 /* JioSaavnDownloader */ = {
 			isa = PBXGroup;
 			children = (
+				D3681108284CEBE8008AB1C7 /* Song.swift */,
 				D30B60D3284C4238003FA159 /* AppDelegates */,
 				D30B60D6284C429C003FA159 /* Controllers */,
 				D3E7438B284C8AC1008B6264 /* Managers */,
@@ -119,10 +112,8 @@
 				D34FA4D2284C559500E74C4A /* Helpers */,
 				D34FA4DC284C59CE00E74C4A /* Extensions */,
 				D34FA4DD284C59EA00E74C4A /* Storyboards */,
-				D3E74398284CC505008B6264 /* resources */,
 				D30B60C8284C4226003FA159 /* Assets.xcassets */,
 				D30B60CD284C4226003FA159 /* Info.plist */,
-				D3681108284CEBE8008AB1C7 /* Song.swift */,
 			);
 			path = JioSaavnDownloader;
 			sourceTree = "<group>";
@@ -141,7 +132,6 @@
 			children = (
 				D30B60D7284C42CD003FA159 /* MainNavigationController.swift */,
 				D32FEE0C284C448B00E76072 /* HomeController.swift */,
-				D3E7438C284C9005008B6264 /* EditingController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -151,7 +141,6 @@
 			children = (
 				D3E74390284C95A3008B6264 /* TYProgressBar.swift */,
 				D34FA4CC284C558E00E74C4A /* TYIdentifiable.swift */,
-				D340C73C284D194E00AB4541 /* TYAudioContext.swift */,
 				D3E74388284C81BC008B6264 /* CustomViews */,
 			);
 			path = Helpers;
@@ -204,15 +193,6 @@
 				D3E74394284CC341008B6264 /* TYAudioVideoManager.swift */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		D3E74398284CC505008B6264 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				D3E7439D284CD2B2008B6264 /* blank_video.mp4 */,
-				D3E74396284CC470008B6264 /* blank.wav */,
-			);
-			path = resources;
 			sourceTree = "<group>";
 		};
 		EC16987BC6E404A6F4C93B18 /* Frameworks */ = {
@@ -283,9 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3E7439E284CD2B2008B6264 /* blank_video.mp4 in Resources */,
 				D30B60CC284C4226003FA159 /* LaunchScreen.storyboard in Resources */,
-				D3E74397284CC470008B6264 /* blank.wav in Resources */,
 				D30B60C9284C4226003FA159 /* Assets.xcassets in Resources */,
 				D30B60C7284C4225003FA159 /* Main.storyboard in Resources */,
 			);
@@ -347,14 +325,12 @@
 				D3681109284CEBE8008AB1C7 /* Song.swift in Sources */,
 				D34FA4D6284C564200E74C4A /* Service.swift in Sources */,
 				D30B60C0284C4225003FA159 /* AppDelegate.swift in Sources */,
-				D3E7438D284C9005008B6264 /* EditingController.swift in Sources */,
 				D34FA4DB284C59CB00E74C4A /* Extension+Array.swift in Sources */,
 				D30B60D8284C42CD003FA159 /* MainNavigationController.swift in Sources */,
 				D30B60C2284C4225003FA159 /* SceneDelegate.swift in Sources */,
 				D3E7438F284C9098008B6264 /* Extension+FileManager.swift in Sources */,
 				D32FEE0D284C448B00E76072 /* HomeController.swift in Sources */,
 				D34FA4DF284C6A7D00E74C4A /* Extension+String.swift in Sources */,
-				D340C73D284D194E00AB4541 /* TYAudioContext.swift in Sources */,
 				D34FA4D1284C558E00E74C4A /* AlertManager.swift in Sources */,
 				D34FA4D7284C564200E74C4A /* API.swift in Sources */,
 				D3E74391284C95A3008B6264 /* TYProgressBar.swift in Sources */,
@@ -506,9 +482,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FWQ7N3RX7G;
+				DEVELOPMENT_TEAM = MAQC2A4R74;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JioSaavnDownloader/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -517,6 +494,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,6 +503,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.YashThakar.JioSaavnDownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,9 +516,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FWQ7N3RX7G;
+				DEVELOPMENT_TEAM = MAQC2A4R74;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JioSaavnDownloader/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -548,6 +528,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,6 +537,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.YashThakar.JioSaavnDownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

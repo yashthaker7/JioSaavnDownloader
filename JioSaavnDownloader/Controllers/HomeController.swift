@@ -20,13 +20,18 @@ class HomeController: UIViewController {
         
         navigationView.addShadow(radius: 2)
         setPasteboardText()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(appEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+    }
+    
+    @objc func appEnterForeground() {
+        setPasteboardText()
     }
     
     private func setPasteboardText() {
         if let pasteboardText = UIPasteboard.general.string {
             textView.text = pasteboardText
         }
-        textView.text = "https://www.jiosaavn.com/song/soniye/AxgychBKXHY"
     }
     
     @IBAction func downloadSongBtnAction(_ sender: UIButton) {
@@ -49,8 +54,10 @@ class HomeController: UIViewController {
         } completion: { result in
             switch result {
             case .success(let downloadUrl):
-                self.navigateToEditingVC(downloadUrl)
-                self.downloadAnimation(.remove)
+                self.convertMP4ToM4A(downloadUrl) { exportUrl in
+                    self.shareFile(exportUrl, sourceView: self.downloadSongBtn, parentController: self)
+                    self.downloadAnimation(.remove)
+                }
             case .failure(let serviceError):
                 self.downloadAnimation(.remove)
                 AlertManager.showServiceErrorAlert(serviceError)
@@ -58,10 +65,27 @@ class HomeController: UIViewController {
         }
     }
     
-    func navigateToEditingVC(_ downloadedSongUrlInDD: URL?) {
-        let editingVC: EditingController = UIStoryboard(.main).instantiateVC()
-        editingVC.downloadedSongUrlInDD = downloadedSongUrlInDD
-        navigationController?.pushViewController(editingVC, animated: true)
+    private func convertMP4ToM4A(_ audioUrl: URL, completion: @escaping (URL) -> ()) {
+        let exportUrl = FileManager.default.createURLInDD(audioUrl.nameWithoutExtension()+".m4a")
+        TYAudioVideoManager.shared.createM4A(audioUrl, exportUrl: exportUrl) { progress in
+            print(progress)
+        } completion: { destinationUrl, error in
+            guard let destinationUrl = destinationUrl else { return }
+            completion(destinationUrl)
+        }
+    }
+    
+    private func shareFile(_ fileUrl: URL, sourceView: UIView, parentController: UIViewController) {
+        let activityVC = UIActivityViewController(activityItems: [fileUrl], applicationActivities: nil)
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            activityVC.popoverPresentationController?.sourceView = sourceView
+            activityVC.popoverPresentationController?.sourceRect = CGRect(x: 150, y: sourceView.frame.height/2, width: 0, height: 0)
+            activityVC.popoverPresentationController?.permittedArrowDirections = [.left, .right]
+        }
+        activityVC.completionWithItemsHandler = { (_, _, _, _) in
+            FileManager.default.removeFileIfExists(fileUrl)
+        }
+        parentController.present(activityVC, animated: true, completion: nil)
     }
     
     enum DownloadAnimationType {

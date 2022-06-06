@@ -18,7 +18,7 @@ public class Service: NSObject {
     
     func downloadSong(_ song: Song, downloadProgress: @escaping (Double) -> (), completion: @escaping (Result<URL, ServiceError>) -> ()) {
         let destination: DownloadRequest.Destination = { _, _ in
-            let fileURL = FileManager.default.createURLInDD(song.name+".m4a")
+            let fileURL = FileManager.default.createURLInDD(song.name+".mp4")
             return (fileURL, [.removePreviousFile])
         }
         AF.download(song.mediaURL, to: destination).downloadProgress { progress in
