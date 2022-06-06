@@ -1,4 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-JioSaavnDownloader/Pods-JioSaavnDownloader-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
-${BUILT_PRODUCTS_DIR}/SoundWave/SoundWave.framework
 ${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework

@@ -8,6 +8,5 @@ target 'JioSaavnDownloader' do
   # Pods for JioSaavnDownloader
   pod 'Alamofire'
   pod 'SwiftMessages'
-  pod "SoundWave"
 
 end
