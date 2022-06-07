@@ -62,7 +62,6 @@
 		0F5721D194E55EB645D48438 /* Pods-JioSaavnDownloader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JioSaavnDownloader.release.xcconfig"; path = "Target Support Files/Pods-JioSaavnDownloader/Pods-JioSaavnDownloader.release.xcconfig"; sourceTree = "<group>"; };
 		3FE061ACCD2BC34AEBE4D73A /* Pods-JioSaavnDownloader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JioSaavnDownloader.debug.xcconfig"; path = "Target Support Files/Pods-JioSaavnDownloader/Pods-JioSaavnDownloader.debug.xcconfig"; sourceTree = "<group>"; };
 		B809F942284F0E0400173389 /* JioSaavnDownloader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JioSaavnDownloader.entitlements; sourceTree = "<group>"; };
-		B809F94D284F11E600173389 /* ShareExtension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ShareExtension copy-Info.plist"; path = "/Users/sotsys302/Desktop/JioSaavnDownloader/ShareExtension copy-Info.plist"; sourceTree = "<absolute>"; };
 		B809F952284F124400173389 /* JioSaavnDownloaderShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JioSaavnDownloaderShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B809F954284F124400173389 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B809F959284F124400173389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,7 +147,6 @@
 				D30B60BD284C4225003FA159 /* Products */,
 				7198CD15A2435B643EFEA272 /* Pods */,
 				EC16987BC6E404A6F4C93B18 /* Frameworks */,
-				B809F94D284F11E600173389 /* ShareExtension copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -650,7 +648,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MAQC2A4R74;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JioSaavnDownloader/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -686,7 +684,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MAQC2A4R74;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JioSaavnDownloader/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
