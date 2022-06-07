@@ -19,9 +19,18 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         
         navigationView.addShadow(radius: 2)
-        setPasteboardText()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(setUrl), name: UIApplication.didBecomeActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(appEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+    }
+
+    @objc func setUrl() {
+        if let incomingURL = UserDefaults(suiteName: "group.JioSaavnDownloaderShareExtension")?.value(forKey: "incomingURL") as? String {
+            textView.text = incomingURL
+            UserDefaults(suiteName: "group.JioSaavnDownloaderShareExtension")?.removeObject(forKey: "incomingURL")
+        } else {
+            setPasteboardText()
+        }
     }
     
     @objc func appEnterForeground() {
@@ -29,9 +38,8 @@ class HomeController: UIViewController {
     }
     
     private func setPasteboardText() {
-        if let pasteboardText = UIPasteboard.general.string {
-            textView.text = pasteboardText
-        }
+        guard let pasteboardText = UIPasteboard.general.string else { return }
+        textView.text = pasteboardText
     }
     
     @IBAction func downloadSongBtnAction(_ sender: UIButton) {

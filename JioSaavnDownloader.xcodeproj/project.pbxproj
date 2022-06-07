@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A6BFC9C2F9B4CB615FB82300 /* Pods_JioSaavnDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E541B4F498427FB4A50EEE11 /* Pods_JioSaavnDownloader.framework */; };
+		B809F955284F124400173389 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B809F954284F124400173389 /* ShareViewController.swift */; };
+		B809F95C284F124400173389 /* JioSaavnDownloaderShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B809F952284F124400173389 /* JioSaavnDownloaderShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D30B60C0284C4225003FA159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B60BF284C4225003FA159 /* AppDelegate.swift */; };
 		D30B60C2284C4225003FA159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30B60C1284C4225003FA159 /* SceneDelegate.swift */; };
 		D30B60C7284C4225003FA159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30B60C5284C4225003FA159 /* Main.storyboard */; };
@@ -32,9 +34,39 @@
 		D3E74395284CC341008B6264 /* TYAudioVideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E74394284CC341008B6264 /* TYAudioVideoManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B809F95A284F124400173389 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D30B60B4284C4225003FA159 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B809F951284F124400173389;
+			remoteInfo = JioSaavnDownloaderShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B809F93E284F0A8000173389 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B809F95C284F124400173389 /* JioSaavnDownloaderShareExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0F5721D194E55EB645D48438 /* Pods-JioSaavnDownloader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JioSaavnDownloader.release.xcconfig"; path = "Target Support Files/Pods-JioSaavnDownloader/Pods-JioSaavnDownloader.release.xcconfig"; sourceTree = "<group>"; };
 		3FE061ACCD2BC34AEBE4D73A /* Pods-JioSaavnDownloader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JioSaavnDownloader.debug.xcconfig"; path = "Target Support Files/Pods-JioSaavnDownloader/Pods-JioSaavnDownloader.debug.xcconfig"; sourceTree = "<group>"; };
+		B809F942284F0E0400173389 /* JioSaavnDownloader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JioSaavnDownloader.entitlements; sourceTree = "<group>"; };
+		B809F94D284F11E600173389 /* ShareExtension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ShareExtension copy-Info.plist"; path = "/Users/sotsys302/Desktop/JioSaavnDownloader/ShareExtension copy-Info.plist"; sourceTree = "<absolute>"; };
+		B809F952284F124400173389 /* JioSaavnDownloaderShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JioSaavnDownloaderShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B809F954284F124400173389 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		B809F959284F124400173389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B809F960284F12F700173389 /* JioSaavnDownloaderShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JioSaavnDownloaderShareExtension.entitlements; sourceTree = "<group>"; };
 		D30B60BC284C4225003FA159 /* JioSaavnDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JioSaavnDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30B60BF284C4225003FA159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D30B60C1284C4225003FA159 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +95,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B809F94F284F124400173389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D30B60B9284C4225003FA159 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,13 +122,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B809F953284F124400173389 /* JioSaavnDownloaderShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B809F960284F12F700173389 /* JioSaavnDownloaderShareExtension.entitlements */,
+				B809F954284F124400173389 /* ShareViewController.swift */,
+				B809F959284F124400173389 /* Info.plist */,
+			);
+			path = JioSaavnDownloaderShareExtension;
+			sourceTree = "<group>";
+		};
+		B809F961284F147900173389 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3681108284CEBE8008AB1C7 /* Song.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D30B60B3284C4225003FA159 = {
 			isa = PBXGroup;
 			children = (
 				D30B60BE284C4225003FA159 /* JioSaavnDownloader */,
+				B809F953284F124400173389 /* JioSaavnDownloaderShareExtension */,
 				D30B60BD284C4225003FA159 /* Products */,
 				7198CD15A2435B643EFEA272 /* Pods */,
 				EC16987BC6E404A6F4C93B18 /* Frameworks */,
+				B809F94D284F11E600173389 /* ShareExtension copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				D30B60BC284C4225003FA159 /* JioSaavnDownloader.app */,
+				B809F952284F124400173389 /* JioSaavnDownloaderShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,9 +164,10 @@
 		D30B60BE284C4225003FA159 /* JioSaavnDownloader */ = {
 			isa = PBXGroup;
 			children = (
-				D3681108284CEBE8008AB1C7 /* Song.swift */,
+				B809F942284F0E0400173389 /* JioSaavnDownloader.entitlements */,
 				D30B60D3284C4238003FA159 /* AppDelegates */,
 				D30B60D6284C429C003FA159 /* Controllers */,
+				B809F961284F147900173389 /* Models */,
 				D3E7438B284C8AC1008B6264 /* Managers */,
 				D34FA4D9284C564700E74C4A /* Services */,
 				D34FA4D2284C559500E74C4A /* Helpers */,
@@ -206,6 +267,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B809F951284F124400173389 /* JioSaavnDownloaderShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B809F95D284F124400173389 /* Build configuration list for PBXNativeTarget "JioSaavnDownloaderShareExtension" */;
+			buildPhases = (
+				B809F94E284F124400173389 /* Sources */,
+				B809F94F284F124400173389 /* Frameworks */,
+				B809F950284F124400173389 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JioSaavnDownloaderShareExtension;
+			productName = JioSaavnDownloaderShareExtension;
+			productReference = B809F952284F124400173389 /* JioSaavnDownloaderShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D30B60BB284C4225003FA159 /* JioSaavnDownloader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D30B60D0284C4226003FA159 /* Build configuration list for PBXNativeTarget "JioSaavnDownloader" */;
@@ -215,10 +293,12 @@
 				D30B60B9284C4225003FA159 /* Frameworks */,
 				D30B60BA284C4225003FA159 /* Resources */,
 				87CB5B677AA8F0ED2831EEA2 /* [CP] Embed Pods Frameworks */,
+				B809F93E284F0A8000173389 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B809F95B284F124400173389 /* PBXTargetDependency */,
 			);
 			name = JioSaavnDownloader;
 			productName = JioSaavnDownloader;
@@ -235,6 +315,9 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					B809F951284F124400173389 = {
+						CreatedOnToolsVersion = 13.4;
+					};
 					D30B60BB284C4225003FA159 = {
 						CreatedOnToolsVersion = 13.4;
 					};
@@ -254,11 +337,19 @@
 			projectRoot = "";
 			targets = (
 				D30B60BB284C4225003FA159 /* JioSaavnDownloader */,
+				B809F951284F124400173389 /* JioSaavnDownloaderShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B809F950284F124400173389 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D30B60BA284C4225003FA159 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,6 +405,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B809F94E284F124400173389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B809F955284F124400173389 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D30B60B8284C4225003FA159 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,6 +441,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B809F95B284F124400173389 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B809F951284F124400173389 /* JioSaavnDownloaderShareExtension */;
+			targetProxy = B809F95A284F124400173389 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		D30B60C5284C4225003FA159 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -362,6 +469,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B809F95E284F124400173389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JioSaavnDownloaderShareExtension/JioSaavnDownloaderShareExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MAQC2A4R74;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JioSaavnDownloaderShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JioSaavnDownloaderShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YashThakar.JioSaavnDownloader.JioSaavnDownloaderShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B809F95F284F124400173389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JioSaavnDownloaderShareExtension/JioSaavnDownloaderShareExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MAQC2A4R74;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JioSaavnDownloaderShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JioSaavnDownloaderShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YashThakar.JioSaavnDownloader.JioSaavnDownloaderShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D30B60CE284C4226003FA159 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -480,8 +643,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FE061ACCD2BC34AEBE4D73A /* Pods-JioSaavnDownloader.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JioSaavnDownloader/JioSaavnDownloader.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -514,8 +679,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F5721D194E55EB645D48438 /* Pods-JioSaavnDownloader.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JioSaavnDownloader/JioSaavnDownloader.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -547,6 +714,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B809F95D284F124400173389 /* Build configuration list for PBXNativeTarget "JioSaavnDownloaderShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B809F95E284F124400173389 /* Debug */,
+				B809F95F284F124400173389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D30B60B7284C4225003FA159 /* Build configuration list for PBXProject "JioSaavnDownloader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
